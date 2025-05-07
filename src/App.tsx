@@ -72,13 +72,12 @@ const App: React.FC = () => {
       max: 2000,
       value: animationDuration,
     },
-
     {
       label: 'Infinite:',
       id: 'infiniteId',
       type: 'checkbox',
       name: 'infinite',
-      checked: { infinite },
+      checked: infinite,
     },
   ];
 
@@ -108,6 +107,7 @@ const App: React.FC = () => {
                 step={inputStep}
                 value={value}
                 onChange={handleSettingsChange}
+                checked={type === 'checkbox' ? infinite : undefined}
               />
             </div>
           ),
